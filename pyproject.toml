@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "Ida project"
+version = "0.1.0"
+description = "Test task"
+authors = ["DOBRO-228 <matematikaigor@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "~2.23.0"
+python-dotenv = "^0.19.1"
+dj-database-url = "^0.5.0"
+psycopg2 = "^2.9.3"
+Django = "^4.0.3"
+djangorestframework = "^3.13.1"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.9.3"
+wemake-python-styleguide = "^0.16.0"
+coverage = "^6.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
