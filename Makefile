@@ -7,7 +7,7 @@ test:
 sort:
 	poetry run isort .
 start:
-	poetry run python3.10 manage.py runserver
+	poetry run python3.9 manage.py runserver
 start_gunicorn:
 	poetry run gunicorn task_manager.wsgi
 shell:

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+
+  <meta charset="utf-8">
+
+</head>
+
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <h1 class="h1">Заголовок</h1>
+    {% if csrs %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">csr code</th>
+          <th scope="col">gp name</th>
+          <th scope="col">sp name</th>
+          <th scope="col">om name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for csr in csrs %}
+        <tr>
+          <td>{{ csr.csr_code }}</td>
+          <td>{{ csr.gp_name }}</td>
+          <td>{{ csr.sp_name }}</td>
+          <td>{{ csr.om_name }}</td>
+        <tr>
+          {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-danger" role="alert">
+      Что-то пошло не так!
+    </div>
+    {% endif %}
+  </div>
+</body>
+
+</html>
